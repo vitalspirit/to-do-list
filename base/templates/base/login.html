@@ -1,0 +1,33 @@
+{% extends 'base/main.html' %} 
+{% block content %}
+
+<div class="header-bar">
+  <div class = "d-flex justify-content-between">
+    <div>
+      <h3>Login page</h3>
+    </div>
+    <div>
+      
+    </div>
+
+</div>
+</div>
+
+<div class="m-3">
+<form method = "POST">
+  {% csrf_token %}
+  {{form.as_p}}
+<input style="width:100px" class="btn btn-info"  type="submit" value="Login">
+
+
+
+
+</form>
+
+<br>
+<p>Don't have an acount? <a href="{% url 'register' %}">Register</a></p>
+
+
+</div>
+
+{% endblock content %}

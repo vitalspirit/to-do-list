@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>To Do List</title>
+  <link rel="shortcut icon" type="image/jpg" href="{% static 'images/favicon.ico' %}"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #fafafa;
+      font-family: 'Nunito', sans-serif;
+      padding-top: 50px;
+      background-image: linear-gradient( 179.4deg,  rgba(33,150,243,1) 1.8%, rgba(22,255,245,0.60) 97.1% );
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    min-height: 100vh;
+    }
+    a,
+    p {
+      color: #4b5156;
+      text-decoration: none;
+    }
+
+    .first_container {
+      flex: 1 0 auto;
+    }
+
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+      padding: 0px 0px 0px 0px;
+      background-color: #fff;
+      -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+      box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+      border-radius: 5px 5px 5px 5px;
+
+    }
+    .header-bar {
+
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+      background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+    }
+
+    .main_box {
+      border-radius: 0 0 5px 5px;
+    }
+
+
+
+
+    .header-bar a {
+      color: rgb(247, 247, 247);
+      text-decoration: none;
+    }
+
+    .text_20 {
+      font-size: 20px;
+
+    }
+
+    .edit_link a,
+    .del_link a,
+    .task_id a
+     {
+      text-decoration: none;
+    }
+    .task-complete-icon {
+      height: 20px;
+      width: 20px;
+      background-color: rgb(105, 192, 105);
+      border-radius: 50%
+    }
+    .task-incomplete-icon {
+      height: 20px;
+      width: 20px;
+      background-color: rgb(179, 190, 179);
+      border-radius: 50%
+    }
+    input[type=text],
+    input[type=password],
+    textarea {
+      border: 1px solid #EB796F;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+    }
+    .footer {
+      flex-shrink: 0;
+}
+  </style>
+
+</head>
+<body>
+<div class="first_container">
+  <div class="container">
+
+      {% block content %}
+
+
+      {% endblock %}
+
+  </div>
+</div>
+<footer class="footer text-center">  <img width="200px" src="{% static 'images/logo.png' %}" alt=""></footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

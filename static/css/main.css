@@ -1,0 +1,10 @@
+html, body{
+    font-family: 'Montserrat', sans-serif;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+		color: #00719c;
+    background-color: coral;
+		min-height: 100%;
+		margin: 0;
+		padding: 0;
+	}
